@@ -6,12 +6,23 @@
  * - Math (round, ceil, floor)
  */
 
-let elementWidth = "50px";
-console.log("elementWidth: ", elementWidth);
+// let elementWidth = "12.5123px";
+// console.log("elementWidth: ", elementWidth);
 
-let elementHeight = "200.74px";
 
-console.log("elementHeight: ", elementHeight);
+// console.log(parseInt(elementWidth));
+// console.log(parseFloat(elementWidth));
+
+// let elementHeight = "200.74px";
+
+// console.log("elementHeight: ", elementHeight);
+
+
+// const size = 14.27
+
+// const value = Math.round(size * 10) / 10;
+// console.log(value);
+
 
 /**
  * Напиши скрипт, який виводить у консоль заокруглені вгору/вниз і т.д.
@@ -19,4 +30,7 @@ console.log("elementHeight: ", elementHeight);
  * та Math.round(). Перевір що буде в консолі при значеннях 27.3 та 27.9.
  */
 
-const value = 27.5;
+// const value = 27.2;
+
+
+// console.log(Math.ceil(value));
