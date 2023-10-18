@@ -7,4 +7,4 @@
   - startsWith/endsWith
   - indexOf
   - trim
-- Циклы
+- Цикли
