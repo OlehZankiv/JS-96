@@ -2,13 +2,22 @@
  * Метод flatMap
  */
 
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
 
-const tags = tweets;
-console.log(tags.flatMap(tweet => tweet.tags));
+// const tags = tweets.flatMap(tweet => tweet.tags)
+
+// console.table(tags);
+
+
+
+// forEach => метод масиву, який ітерується по кожному елементу масив і нічого не повертає.
+// Він створений для того, щоб пройтись по кожному елементу масиву і використати надані дані.
+
+// map => метод масиву, який ітерується по кожному елементу масив і повертає результат поверенню виклику колбеків над кожною ітерацією.
+// Він створений для того, щоб пройтий по кожному елементу масиву і обробити його згідно логіці колбеку.

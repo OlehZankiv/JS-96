@@ -18,20 +18,42 @@ const allCars = [
   { make: "Ford", model: "Explorer", amount: 6, price: 31660 },
 ];
 
+// allCars.forEach((car) => {
+//   console.log(car);
+// })
+
+
+
+
+// const result = allCars.map((car, i) => {
+//   return {
+//     ...car,
+//     price: car.price - car.price * 0.2
+//   }
+// })
+
+
+// console.log(result);
+
 /**
  * Нехай функція getModels повертає масив моделей (поле model) всіх автомобілів.
  */
 
-const getModels = (cars) => {};
+// const getModels = (cars) => cars.map((car) => car.model);
 
-console.table(getModels(allCars));
+// console.log(getModels(allCars));
 
 /**
  * Нехай функція makeCarsWithDiscount повертає новий масив об'єктів із змінним
  * значенням властивості price залежно від переданої знижки.
  */
 
-const makeCarsWithDiscount = (cars, discount) => {};
+// const makeCarsWithDiscount = (cars, discount) => {
+//   return cars.map((car) => ({
+//     ...car,
+//     price: car.price - car.price * discount
+//   }))
+// };
 
-console.table(makeCarsWithDiscount(allCars, 0.2));
-console.table(makeCarsWithDiscount(allCars, 0.4));
+// console.table(makeCarsWithDiscount(allCars, 0.2));
+// console.table(makeCarsWithDiscount(allCars, 0.4));
