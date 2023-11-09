@@ -3,16 +3,19 @@
  */
 // const numbers = [1, 5, 2, 4, 3];
 
-// const greaterThenTwo = numbers;
+// const greaterThenTwo = numbers.filter(number => number > 2);
 // console.log(greaterThenTwo);
 
-// const multByThree = greaterThenTwo;
+// const multByThree = greaterThenTwo.map(number => number * 3);
 // console.log(multByThree);
 
-// const sorted = multByThree;
+// const sorted = multByThree.toSorted((a, b) => a - b);
 // console.log(sorted);
 
-// const sortedbyChaining = numbers;
+// const sortedbyChaining = numbers
+//                             .filter(num => num > 2)
+//                             .map(num => num * 3)
+//                             .toSorted((a, b) => a - b);
 // console.log(sortedbyChaining);
 
 /**
@@ -105,14 +108,21 @@ const allCars = [
  * Нехай функція getAvailableCarNames повертає масив моделей автомобілів,
  * але тільки тих, які зараз на розпродажі.
  */
-// const getModelsOnSale = (cars) => {};
+// const getAvailableCarNames = (cars) => {
+//   return cars.filter(car => car.onSale).map(car => car.model).sort();
+// };
 
-// console.table(getModelsOnSale(allCars));
+// console.log(getAvailableCarNames(allCars));
 
 /**
  * Нехай функція getSortedCarsOnSale повертає масив автомобілів
  * на розпродажі (Властивість onSale), відсортованих за зростанням ціни.
  */
-// const getSortedCarsOnSale = (cars) => {};
+// const getSortedCarsOnSale = (cars) => {
+//   return cars
+//             .filter(car => car.onSale)
+//             .sort((a, b) => a.price - b.price)
+// };
 
-// console.table(getSortedCarsOnSale(allCars));
+// console.log(getSortedCarsOnSale(allCars));
+ 

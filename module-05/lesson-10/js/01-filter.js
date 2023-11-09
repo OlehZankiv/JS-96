@@ -1,3 +1,28 @@
+//
+//
+
+// Умови чистої функції:
+// 1. Повертає очікуваний результат;
+// 2. Якщо її викликати декілька раз з одинаковими параметрами,
+//      то вона має працювати ідентично;
+// 3. Функція не має використовувати або змінювати глобальні змінні.
+// 4. Не змінює параметри, які у неї приходять, а працює з копіями.
+
+// const user = {
+//   name: "Oleh"
+// }
+
+
+// const sayHi = (additionWord = "") => {
+//   console.log("Hi" + additionWord);
+//   return null;
+// }
+
+// const result1 = sayHi("hello");
+// const result2 = sayHi("hello");
+
+
+
 /**
  * Метод filter
  *
@@ -8,10 +33,24 @@
  *    - якщо колбек повертає false, то елемент НЕ добавляється у новий масив
  */
 
-const numbers = [5, 10, 15, 20, 25];
+// const numbers = [5, 10, 15, 20, 25];
 
-// const filteredNumbers = numbers;
+// let filteredNumbers = numbers.filter((value) => value > 5);
+
 // console.log(filteredNumbers);
+
+
+// const users = [
+//   {id: 1},
+//   {id: 2},
+//   {id: 3},
+//   {id: 4},
+//   {id: 5},
+// ]
+
+// const userIdToDelete = 3;
+
+// console.log(users.filter(user => user.id !== 12))
 
 /**
  * ---------------------------
@@ -104,26 +143,46 @@ const allCars = [
  * значення параметра threshold.
  */
 
-// const filterByPrice = (cars, threshold) => {};
+// const filterByPrice = (cars, threshold) => {
+//     return cars.filter((car) => car.price <= threshold)
+// };
 
-// console.table(filterByPrice(allCars, 30000));
-// console.table(filterByPrice(allCars, 25000));
+// console.log(filterByPrice(allCars, 30000));
+// console.log(filterByPrice(allCars, 25000));
 
 /**
  * Нехай функція getCarsWithDiscount повертає масив автомобілів
  * властивість onSale яких true.
  */
 
-// const getCarsWithDiscount = (cars) => {};
+// const getCarsWithDiscount = (cars) => cars.filter((car) => car.onSale);
 
 // console.table(getCarsWithDiscount(allCars));
+
+
+// const users = [
+//   {id: 1},
+//   null,
+//   NaN,
+//   undefined,
+//   {id: 2},
+//   {id: 3},
+//   null,
+//   {id: 5}
+// ]
+
+// const reallyUser = users.filter(Boolean);
+
+// console.log(reallyUser);
 
 /**
  * Нехай функція getCarsWithType повертає масив автомобілів тип яких збігається
  * зі значенням параметра type.
  */
 
-// const getCarsWithType = (cars, type) => {};
+// const getCarsWithType = (cars, type) => {
+//   return cars.filter(car => car.type === type);
+// }
 
 // console.table(getCarsWithType(allCars, "suv"));
 // console.table(getCarsWithType(allCars, "sedan"));

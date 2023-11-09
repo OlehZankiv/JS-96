@@ -1,13 +1,14 @@
 /**
  * Метод reduce
  *
- * 
  * - Перебирає оригінальний масив
  * - Повертає значення, яке залежить від розробника
  */
 
 // const numbers = [5, 10, 15, 20, 25];
-// const total = numbers;
+
+// const total = numbers.reduce((acc, current) => acc + current, 0);
+
 // console.log(total);
 
 /**
@@ -17,10 +18,13 @@
 // const salary = {
 //   mango: 100,
 //   poly: 50,
-//   ajax: 150,
+//   ajax: 151,
 // };
 
-// const totalSalary = salary;
+
+
+// const totalSalary = Object.values(salary)
+//                         .reduce((total, current) => total + current, 0);
 // console.log(totalSalary);
 
 /**
@@ -35,7 +39,10 @@
 //   { id: "player-5", name: "Chelsey", timePlayed: 80, online: true },
 // ];
 
-// const totalTimePlayed = players;
+// const totalTimePlayed = players.reduce((totalTime, player) => {
+//    return totalTime + player.timePlayed;
+// }, 0);
+
 // console.log(totalTimePlayed);
 
 /**
@@ -47,5 +54,7 @@
 //   { label: "Lemons", price: 70, quantity: 4 },
 // ];
 
-// const totalAmount = cart;
+// const totalAmount = cart.reduce((totalPrice, product) => {
+//     return totalPrice + product.price * product.quantity
+// }, 0);
 // console.log(totalAmount);

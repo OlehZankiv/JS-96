@@ -10,9 +10,12 @@
  *  - приводить елементи до стрічки і суртує по [Unicode](https://unicode-table.com/en/)
  */
 
-// const numbers = [1, 9, 6, 2, 3];
+// const numbers = [1, 9, 6, 12, 2, 3];
 
-// const sorted = numbers;
+
+// const sorted = numbers.toSorted((a, b) => a - b);
+
+
 // console.log("sorted ", sorted);
 
 // const letters = ["b", "B", "a", "A"];
@@ -37,6 +40,7 @@
 /**
  * Сотрування масиву об'єктів
  */
+
 // const players = [
 //   { id: "player-1", name: "Mango", timePlayed: 310, online: false },
 //   { id: "player-2", name: "Poly", timePlayed: 470, online: true },
@@ -46,12 +50,23 @@
 // ];
 
 // По ігровому часі
-// const sortedByBestPlayers = players;
+// const sortedByBestPlayers = players.toSorted((a, b) => b.timePlayed - a.timePlayed);
 // console.table(sortedByBestPlayers);
 
-// const sortedByWorstPlayers = players;
+// const sortedByWorstPlayers = players.toSorted((a, b) => {
+// //    let isABetterOnline = a.online && !b.online ? 1 : -1;
+
+// //    if (a.online && b.online) isABetterOnline = 0;
+
+//    const timeSort = a.timePlayed - b.timePlayed;
+
+// //    return timeSort + isABetterOnline
+//    return timeSort
+// });
 // console.table(sortedByWorstPlayers);
 
 // По першій букві імені
-// const byName = players;
+// const byName = players.toSorted((a, b) => {
+//     return a.name[0] > b.name[0] ? 1 : -1;
+// });
 // console.table(byName);
