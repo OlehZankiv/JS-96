@@ -91,6 +91,42 @@ const transactionHistory = [
   },
 ];
 
-const tableEl = document.querySelector('.transaction-table');
+// {
+//   id: '79ccb1dd-6544-47cc-9a40-ea453985a748',
+//   amount: '788.40',
+//   date: '2012-02-01T22:00:00.000Z',
+//   business: 'Ullrich, Shields and Koelpin',
+//   name: 'Personal Loan Account 8318',
+//   type: 'invoice',
+//   account: '07081761',
+// },
+
+const tableBodyElement = document.querySelector('.transaction-table tbody');
 
 
+// const transactionElements = transactionHistory.map(transaction => `
+//     <tr>
+//       <td>${transaction.id}</td>
+//       <td>${transaction.amount} UAH</td>
+//       <td>${new Date(transaction.date).toDateString()}</td>
+//       <td>${transaction.business}</td>
+//       <td>${transaction.type}</td>
+//       <td>${transaction.name}</td>
+//       <td>${transaction.account}</td>
+//     </tr>
+// `)
+
+const transactionElements = transactionHistory.reduce((html, transaction) => html + `
+  <tr>
+    <td>${transaction.id}</td>
+    <td>${transaction.amount} UAH</td>
+    <td>${new Date(transaction.date).toDateString()}</td>
+    <td>${transaction.business}</td>
+    <td>${transaction.type}</td>
+    <td>${transaction.name}</td>
+    <td>${transaction.account}</td>
+  </tr>
+`, "");
+
+
+tableBodyElement.insertAdjacentHTML("afterbegin", transactionElements)

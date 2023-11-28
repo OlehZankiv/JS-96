@@ -16,3 +16,27 @@ const colorPickerContainerEl = document.querySelector('.color-picker');
  * Пишемо функцію для створення розмітки колорпікера
  * append vs appendChild
  */
+
+const colorsHTML = options.reduce((html, option) => html + `
+  <div 
+    data-color="${option.color}"
+    title=${option.label} 
+    style="background-color: ${option.color}"
+    class="color-picker__option"
+  ></div>
+`, "")
+
+colorPickerContainerEl.insertAdjacentHTML("beforeend", colorsHTML)
+
+console.log(colorsHTML);
+
+// const colorElements = options.map((option) => {
+//   const colorElement = document.createElement('div');
+//   colorElement.className = "color-picker__option";
+//   colorElement.title = option.label;
+//   colorElement.style.backgroundColor = option.color;
+
+//   return colorElement;
+// })
+
+// colorPickerContainerEl.append(...colorElements);

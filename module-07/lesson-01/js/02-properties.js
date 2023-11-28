@@ -5,9 +5,15 @@
  * https://images.pexels.com/photos/1870376/pexels-photo-1870376.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=480
  */
 
-// const imageEl = document.querySelector('.hero__image');
+// const img = document.querySelector(".hero__image");
 
-// const heroTitleEl = document.querySelector('.hero__title');
+
+// img.alt = "It's not me";
+// img.src = "https://images.pexels.com/photos/1870376/pexels-photo-1870376.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=480";
+
+// const title = document.querySelector('.hero__title');
+
+// title.textContent = "New Title";
 
 /*
  * Атрибути
@@ -17,8 +23,15 @@
  * - has(ім'я-атрибута)
  */
 
+// const attribute = img.hasAttribute("class")
+
+// console.log(attribute);
 
 /*
  * Data-атрибути
  */
 // const actions = document.querySelectorAll('.actions button');
+
+// actions.forEach(button => {
+    
+// })
