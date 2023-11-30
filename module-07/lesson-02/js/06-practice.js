@@ -58,3 +58,32 @@ const elements = {
 };
 
 
+const renderNewCars = (query, option = "car") => {
+  let searchedCars = cars;
+
+  if (query) {
+    searchedCars = searchedCars.filter((car) => car[option].toLowerCase().includes(query.toLowerCase()));
+  }
+
+  const renderedCars = searchedCars.reduce((html, car) => html + `
+    <li type="none" title="${car.car + " | " + car.type}">
+      <img width="300" src="${car.img}" alt="${car.car}" />
+      <span>${car.car} | ${car.type}</span>
+      <p>$ ${car.price}</p>
+    </li>
+  `, "")
+
+  elements.container.innerHTML = renderedCars;
+};
+
+
+renderNewCars();
+
+
+elements.form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const data = new FormData(e.target);
+
+  renderNewCars(data.get("query"), data.get("options"))
+})
