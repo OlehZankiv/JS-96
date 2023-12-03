@@ -1,0 +1,23 @@
+#parent,
+#child,
+#inner-child {
+  margin: 16px;
+  padding: 16px;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#parent {
+  background-color: #673ab7;
+}
+
+#child {
+  background-color: #448aff;
+}
+
+#inner-child {
+  background-color: #009688;
+}
