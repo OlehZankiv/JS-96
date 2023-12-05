@@ -7,3 +7,10 @@
 const parent = document.querySelector("#parent");
 const child = document.querySelector("#child");
 const innerChild = document.querySelector("#inner-child");
+
+
+parent.addEventListener("click", event => {
+
+    console.log(event.target);
+    console.log(event.currentTarget);
+});

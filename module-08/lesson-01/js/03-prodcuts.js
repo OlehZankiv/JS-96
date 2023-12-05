@@ -44,3 +44,30 @@ const products = [
 ];
 
 const container = document.querySelector(".products");
+
+container.innerHTML = products.reduce((html, product) => html + `
+      <li class="item product-item" data-productid="${product.id}">
+        <img src="${product.img}" alt="${product.name}" width="300"/>
+        <h2>${product.name}</h2>
+        <p>Price: ${product.price} uah</p>
+      </li> 
+`, "");
+
+
+container.addEventListener("click", (event) => {
+  const productId = event.target.dataset.productid;
+
+  if (productId) {
+    const product = products.find(product => product.id.toString() === productId);
+    if (!product) return;
+
+    basicLightbox.create(`
+      <div class="modal">
+        <img src="${product.img}" alt="${product.name}" width="300"/>
+        <h2>${product.name}</h2>
+        <h3>${product.price} uah</h3>
+        <p>${product.description}</p>
+      </div> 
+	  `).show();
+  }
+})

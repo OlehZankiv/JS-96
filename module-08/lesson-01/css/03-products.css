@@ -22,6 +22,7 @@ ul {
   height: 300px;
   border-radius: 8px;
   margin-bottom: 10px;
+  pointer-events: none;
 }
 
 .item h2 {
@@ -32,6 +33,7 @@ ul {
 .item p {
   font-size: 1rem;
   margin: 5px 0;
+  pointer-events: none;
 }
 
 .modal {
