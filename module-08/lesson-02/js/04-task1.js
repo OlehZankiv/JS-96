@@ -1,5 +1,5 @@
 /**
- * Деструктуризуй об'єкт таким чином щоб отримати значення name, surname, username
+ * Деструктуризуй об'єкт таким чином, щоб отримати значення name, surname, username.
  */
 
 const user = {
@@ -12,9 +12,11 @@ const user = {
   },
 };
 
+const { profile: { name, surname }, username } = user;
+
 // Деструктуризація об'єкта для отримання окремих змінних
 
 // Виведення отриманих значень
-// console.log(`Ім'я користувача: ${name}`);
-// console.log(`Прізвище користувача: ${surname}`);
-// console.log(`Ім'я користувача (за нікнеймом): ${username}`);
+console.log(`Ім'я користувача: ${name}`);
+console.log(`Прізвище користувача: ${surname}`);
+console.log(`Ім'я користувача (за нікнеймом): ${username}`);
