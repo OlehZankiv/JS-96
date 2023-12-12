@@ -1,0 +1,9 @@
+{
+    "user": [
+        { "name": "Oleh", "age": 23, "id": "afef-abf1fcae" }
+    ],
+    "some": {},
+    "total": 1,
+    "hello": false,
+    "3": null
+}

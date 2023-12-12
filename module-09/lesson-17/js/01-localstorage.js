@@ -1,9 +1,43 @@
 /**
+ * JSON
+ */
+
+
+const user = {
+  name: "Oleh",
+  age: 23
+}
+
+// const strUser = JSON.stringify(user);
+
+// console.log(JSON.parse(strUser));
+
+/**
  * LocalStorage
  */
 
-const LS_KEY = "Array of names";
-const names = ["Alice", "Kate", "Emma"];
+const STORAGE_KEYS = {
+  USER: "USER",
+  RANDOM: "RANDOM"
+}
+
+
+localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(user)) 
+
+const savedUser = localStorage.getItem(STORAGE_KEYS.USER);
+
+try {
+  JSON.parse(savedUser)
+} catch(error) {
+  // console.log(error, "JSON ERROR");
+}
+
+const random = localStorage.getItem(STORAGE_KEYS.RANDOM) 
+console.log(Number(random), "FROM LS");
+
+if (!localStorage.getItem(STORAGE_KEYS.RANDOM)) {
+  localStorage.setItem(STORAGE_KEYS.RANDOM, Math.random());
+}
 
 /**
  * Збереження
@@ -23,14 +57,15 @@ const names = ["Alice", "Kate", "Emma"];
  * LocalStorage не може зберігати функції
  */
 
-function add(a, b) {
-  return a + b;
-}
+// function add(a, b) {
+//   return a + b;
+// }
 
-const calculator = {
-  a: 5,
-  b: 10,
-  add() {
-    return this.a + this.b;
-  },
-};
+
+// const calculator = {
+//   a: 5,
+//   b: 10,
+//   add() {
+//     return this.a + this.b;
+//   },
+// };
