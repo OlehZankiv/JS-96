@@ -1,0 +1,19 @@
+{
+  "name": "my-proj",
+  "version": "1.0.0",
+  "description": "No description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "project"
+  ],
+  "author": "Oleh Zankiv",
+  "license": "ISC",
+  "dependencies": {
+    "debounce": "^2.0.0",
+    "simplelightbox": "^2.14.2"
+  }
+}
