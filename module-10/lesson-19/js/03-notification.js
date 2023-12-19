@@ -8,24 +8,25 @@ const NOTIFICATION_DELAY = 3000;
 let timeoutId = null;
 
 const notification = document.querySelector(".js-alert");
+const showButton = document.querySelector(".js-show-alert");
+
+showButton.addEventListener("click", showNotification);
+notification.addEventListener("click", onNotificationClick);
 
 /*
  * Функції
  */
 function onNotificationClick() {
-  console.log(
-    "Логіка при кліку на нотифікацію, потрібно її закрити"
-  );
+  if (timeoutId) clearTimeout(timeoutId);
+  hideNotification();
 }
 
 function showNotification() {
-  console.log(
-    "Відкрити нотифікацію, та закрити її автоматично після NOTIFICATION_DELAY"
-  );
+  notification.classList.add("is-visible");
+
+  timeoutId = setTimeout(hideNotification, NOTIFICATION_DELAY);
 }
 
 function hideNotification() {
-  console.log(
-    "Закрити нотифікацію"
-  );
+  notification.classList.remove("is-visible");
 }
