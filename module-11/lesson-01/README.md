@@ -6,7 +6,7 @@
 
 - Архітектура клієнт-сервер
 - Протоколи передачі даних: HTTP та HTTPS
-- REST API (backend)
+- REST API (backend) REST
 - HTTP-запити
 - Публічні REST API
 

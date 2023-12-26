@@ -9,18 +9,35 @@
 
 
 
+// fetch("telegram.com/send-message", {
+//   method: "POST",
+//   headers: {
+//     "Authorization": "awidawoidjowijdwoidjihwd"
+//   },
+//   body: JSON.stringify({
+//     message:"WDuhawiduhwoauhdouawhduawhdiuhw"
+//   }
+// });
 
-/**
- * Використовуємо https://pokeapi.co/ та створимо сторінку перегляду покемонів
- */
+// const BASE_URL = "https://pixabay.com/api/";
+// const API_KEY = "128326aawdwdwdwdwd82-dawd"
 
-const cardContainer = document.querySelector(".card-container");
-const searchForm = document.querySelector(".search-form");
+// const getBaseUrl = () => {
+//   const url = new URL(BASE_URL);
+//   url.searchParams.append("key", API_KEY)
 
-searchForm.addEventListener("submit", (event) => {
-  event.preventDefault;
+//   return url;
+// }
 
-  const query = event.currentTarget.elements.query.value;
 
-});
+// const url = getBaseUrl();
+// url.searchParams.append("q", "black")
 
+
+// fetch(url)
+//   .then(res => res.json())
+//   .then(images => {
+//     document.body.insertAdjacentHTML("beforeend", `
+//       <img src="${images.hits[0].largeImageURL}"/>
+//     `)
+//   })
