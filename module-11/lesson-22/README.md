@@ -19,3 +19,10 @@
   - **D**elete
     - Метод DELETE
     - Відповідь
+
+CRUD
+
+Create -> POST
+Read -> GET
+Update -> PUT, PATCH
+Delete -> DELETE

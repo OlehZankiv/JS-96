@@ -1,6 +1,8 @@
 *,
 *::before,
 *::after {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -8,7 +10,9 @@ body {
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.5;
-  color: #2a2a2a;
+  color: #ffffff;
+  background-color: #1e222a;
+  padding: 24px 32px;
 }
 
 img {
@@ -16,3 +20,94 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 50%;
+  margin: 0 auto;
+  gap: 12px;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+input {
+  padding: 8px 16px;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 8px;
+}
+
+button[type="submit"] {
+  background-color: #549cff;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.books-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+  margin-top: 64px;
+}
+
+
+.book {
+  background-color: #666666;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.name, .author, .price {
+  padding: 0 8px;
+  margin-top: 4px;
+}
+
+.pointer-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  padding-bottom: 16px;
+}
+
+.book .delete {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background-color: #549cff;
+  border-radius: 4px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+/* <div class="book">
+<img src="https://loremflickr.com/640/480"/>
+<p class="name">Tears of a Clown</p>
+<p class="author">Ms. Nathaniel Heidenreich DDS</p>
+<p class="price">$414</p>
+<div class="pointer-block">
+  <input name="pointer" type="number" placeholder="Book pointer"/>
+  <button type="submit">Save</button>
+</div>
+<button ty */
