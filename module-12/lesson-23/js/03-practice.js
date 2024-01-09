@@ -4,50 +4,53 @@
  * Переписуємо на async/await
  */
 
-// function fetchPokemon(pokemonId) {
-//   return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId.toLowerCase()}`).then(
-//     (response) => response.json()
-//   );
-// }
+async function fetchPokemon(pokemonId) {
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId.toLowerCase()}`);
 
-// const cardContainer = document.querySelector(".card-container");
-// const searchForm = document.querySelector(".search-form");
+  return response.json();
+}
 
-// searchForm.addEventListener("submit", onSearch);
+const cardContainer = document.querySelector(".card-container");
+const searchForm = document.querySelector(".search-form");
 
-// function onSearch(e) {
-//   e.preventDefault();
+searchForm.addEventListener("submit", onSearch);
 
-//   const form = e.currentTarget;
-//   const searchQuery = form.elements.query.value;
+async function onSearch(e) {
+  e.preventDefault();
 
-//   fetchPokemon(searchQuery)
-//     .then(renderPokemonCard)
-//     .catch(onFetchError)
-//     .finally(form.reset);
-// }
+  const form = e.currentTarget;
+  const searchQuery = form.elements.query.value;
 
-// function renderPokemonCard({ name, sprites, weight, height, abilities }) {
-//   const abilityListItems = abilities
-//     .map((ability) => `<li class="list-group-item">${ability.name}</li>`)
-//     .join("");
+  try {
+    const foundPokemon = await fetchPokemon(searchQuery);
+    renderPokemonCard(foundPokemon);
+  } catch(error) {
+    onFetchError(error);
+  } finally {
+    form.reset();
+  }
+}
 
-//   const markup = `<div class="card">
-//    <div class="card-img-top">
-//      <img src="${sprites.front_default}" alt="${name}">
-//    </div>
-//    <div class="card-body">
-//      <h2 class="card-title">Ім'я: ${name}</h2>
-//      <p class="card-text">Вага: ${weight}</p>
-//      <p class="card-text">Зростання: ${height}</p>
+function renderPokemonCard({ name, sprites, weight, height, abilities }) {
+  const abilityListItems = abilities
+    .reduce((html, { ability }) => html + `<li class="list-group-item">${ability.name}</li>`, "");
 
-//      <p class="card-text"><b>Уміння</b></p>
-//      <ul class="list-group">${abilityListItems}</ul>
-//    </div>
-// </div>`;
-//   cardContainer.innerHTML = markup;
-// }
+  const markup = `<div class="card">
+   <div class="card-img-top">
+     <img src="${sprites.front_default}" alt="${name}">
+   </div>
+   <div class="card-body">
+     <h2 class="card-title">Ім'я: ${name}</h2>
+     <p class="card-text">Вага: ${weight}</p>
+     <p class="card-text">Зростання: ${height}</p>
 
-// function onFetchError(error) {
-//   alert("Упс, щось пішло не так і ми не знайшли вашого покемона!");
-// }
+     <p class="card-text"><b>Уміння</b></p>
+     <ul class="list-group">${abilityListItems}</ul>
+   </div>
+</div>`;
+  cardContainer.innerHTML = markup;
+}
+
+function onFetchError(error) {
+  alert("Упс, щось пішло не так і ми не знайшли вашого покемона!");
+}
